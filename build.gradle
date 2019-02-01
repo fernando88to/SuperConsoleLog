@@ -1,9 +1,10 @@
 plugins {
     id 'org.jetbrains.intellij' version '0.4.2'
+
 }
 
 group 'com.fernando88to.superconsolelog'
-version '1.0.0'
+version '1.0.1'
 
 apply plugin: 'java'
 
@@ -22,7 +23,7 @@ intellij {
 }
 patchPluginXml {
     changeNotes """
-      First Version.<br>
+      Compatible with Intellij, Android Studio, PhpStorm and PyCharm .<br>
       """
 }
 
