@@ -1,0 +1,63 @@
+<idea-plugin>
+    <id>com.fernando88to.superconsolelog.SuperConsoleLog</id>
+    <name>Super Console Log</name>
+    <vendor email="fernando88to@gmail.com">Fernando</vendor>
+
+    <description><![CDATA[
+    Plugin capable of inserting log messages by shortcut. <br />
+    Insert log <br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;select a variable first <br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shortcut = alt + shift + 7 <br />
+    Comment log <br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Comment all logs messages of file.<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shortcut = alt + shift + 8<br />
+    Comment log <br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Uncomment all logs messages of file.<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shortcut = alt + shift + 9<br />
+    ]]></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <group id="MyPlugin.SampleMenu" text="Super Console Log" description="Super Console Log" popup="true">
+            <add-to-group group-id="ToolsMenu" anchor="last"></add-to-group>
+
+
+
+
+
+            <action id="fernando88to.com.InsertLogAction"
+                    class="InsertLogAction" text="Insert log"
+                    description="Insert a message of log.">
+                <keyboard-shortcut  keymap="$default" first-keystroke="alt shift 7"/>
+            </action>
+
+            <action id="fernando88to.com.CommentLogAction"
+                    class="CommentLogAction" text="Comment all logs"
+                    description="Comment all commands of logs">
+                <keyboard-shortcut  keymap="$default" first-keystroke="alt shift 8"/>
+
+
+            </action>
+
+            <action id="fernando88to.com.UnCommentLogAction"
+                    class="UncommentLogAction" text="Uncomment all logs"
+                    description="Uncomment all commands of logs">
+                <keyboard-shortcut  keymap="$default" first-keystroke="alt shift 9"/>
+
+            </action>
+
+
+            <!--falta o que deleta todos  ALT+SHIFT+D -->
+
+        </group>
+    </actions>
+</idea-plugin>
